@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Jobs\Scraper;
+use App\Jobs\ShouldSendPushNotification;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -25,7 +26,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->job(new Scraper)->everyMinute()->withoutOverlapping(5);
+        $schedule->job(new Scraper)->everyMinute()->withoutOverlapping(5)->after(function (){
+            ShouldSendPushNotification::dispatch();
+        });
     }
 
     /**

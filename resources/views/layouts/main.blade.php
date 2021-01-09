@@ -40,7 +40,26 @@
         body {
             font-family: 'Fira Code', system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
         }
+
+        .onesignal-customlink-subscribe {
+            box-shadow: none !important;
+        }
+
+        .onesignal-customlink-subscribe:hover {
+            background-color: rgb(49, 42, 148) !important;
+        }
     </style>
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "7d7dcbef-fd36-4088-bffd-df05736cc136",
+                allowLocalhostAsSecureOrigin: true
+            });
+        });
+    </script>
 </head>
 <body class="bg-gradient-to-br from-gray-900 to-black bg-fixed text-white">
     <header class="container px-4 mt-4 mb-8 mx-auto">
@@ -53,6 +72,8 @@
             @endisset
         </h1>
         <p>Puisse le sort vous être favorable</p>
+
+        <div class="onesignal-customlink-container mt-2"></div>
     </header>
 
     <main>
