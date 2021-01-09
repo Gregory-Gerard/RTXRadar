@@ -55,7 +55,7 @@
         window.OneSignal = window.OneSignal || [];
         OneSignal.push(function() {
             OneSignal.init({
-                appId: "7d7dcbef-fd36-4088-bffd-df05736cc136",
+                appId: "{{ env('ONESIGNAL_APP_ID') }}",
                 allowLocalhostAsSecureOrigin: true
             });
         });
