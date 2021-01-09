@@ -14538,7 +14538,268 @@
      
 }
 
-        namespace Facade\Ignition\Facades { 
+        namespace Berkayk\OneSignal { 
+            /**
+     * 
+     *
+     */ 
+        class OneSignalFacade {
+                    /**
+         * Turn on, turn off async requests
+         *
+         * @param bool $on
+         * @return \Berkayk\OneSignal\OneSignalClient 
+         * @static 
+         */ 
+        public static function async($on = true)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->async($on);
+        }
+                    /**
+         * Callback to execute after OneSignal returns the response
+         *
+         * @param Callable $requestCallback
+         * @return \Berkayk\OneSignal\OneSignalClient 
+         * @static 
+         */ 
+        public static function callback($requestCallback)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->callback($requestCallback);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function testCredentials()
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->testCredentials();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function addParams($params = [])
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->addParams($params);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function setParam($key, $value)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->setParam($key, $value);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function sendNotificationToUser($message, $userId, $url = null, $data = null, $buttons = null, $schedule = null, $headings = null, $subtitle = null)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->sendNotificationToUser($message, $userId, $url, $data, $buttons, $schedule, $headings, $subtitle);
+        }
+                    /**
+         * 
+         *
+         * @param $message
+         * @param $userId
+         * @param null $url
+         * @param null $data
+         * @param null $buttons
+         * @param null $schedule
+         * @param null $headings
+         * @param null $subtitle
+         * @static 
+         */ 
+        public static function sendNotificationToExternalUser($message, $userId, $url = null, $data = null, $buttons = null, $schedule = null, $headings = null, $subtitle = null)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->sendNotificationToExternalUser($message, $userId, $url, $data, $buttons, $schedule, $headings, $subtitle);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function sendNotificationUsingTags($message, $tags, $url = null, $data = null, $buttons = null, $schedule = null, $headings = null, $subtitle = null)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->sendNotificationUsingTags($message, $tags, $url, $data, $buttons, $schedule, $headings, $subtitle);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function sendNotificationToAll($message, $url = null, $data = null, $buttons = null, $schedule = null, $headings = null, $subtitle = null)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->sendNotificationToAll($message, $url, $data, $buttons, $schedule, $headings, $subtitle);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function sendNotificationToSegment($message, $segment, $url = null, $data = null, $buttons = null, $schedule = null, $headings = null, $subtitle = null)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->sendNotificationToSegment($message, $segment, $url, $data, $buttons, $schedule, $headings, $subtitle);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function deleteNotification($notificationId, $appId = null)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->deleteNotification($notificationId, $appId);
+        }
+                    /**
+         * Send a notification with custom parameters defined in
+         * https://documentation.onesignal.com/reference#section-example-code-create-notification
+         *
+         * @param array $parameters
+         * @return mixed 
+         * @static 
+         */ 
+        public static function sendNotificationCustom($parameters = [])
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->sendNotificationCustom($parameters);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getNotification($notification_id, $app_id = null)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->getNotification($notification_id, $app_id);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getNotifications($app_id = null, $limit = null, $offset = null)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->getNotifications($app_id, $limit, $offset);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getApp($app_id = null)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->getApp($app_id);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function getApps()
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->getApps();
+        }
+                    /**
+         * Creates a user/player
+         *
+         * @param array $parameters
+         * @return mixed 
+         * @throws \Exception
+         * @static 
+         */ 
+        public static function createPlayer($parameters)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->createPlayer($parameters);
+        }
+                    /**
+         * Edit a user/player
+         *
+         * @param array $parameters
+         * @return mixed 
+         * @static 
+         */ 
+        public static function editPlayer($parameters)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->editPlayer($parameters);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function requestPlayersCSV($app_id = null, $parameters = null)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->requestPlayersCSV($app_id, $parameters);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function post($endPoint)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->post($endPoint);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function put($endPoint)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->put($endPoint);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function get($endPoint)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->get($endPoint);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function delete($endPoint)
+        {
+                        /** @var \Berkayk\OneSignal\OneSignalClient $instance */
+                        return $instance->delete($endPoint);
+        }
+         
+    }
+     
+}
+
+    namespace Facade\Ignition\Facades { 
             /**
      * Class Flare.
      *
@@ -17947,6 +18208,7 @@ namespace  {
             class URL extends \Illuminate\Support\Facades\URL {}
             class Validator extends \Illuminate\Support\Facades\Validator {}
             class View extends \Illuminate\Support\Facades\View {}
+            class OneSignal extends \Berkayk\OneSignal\OneSignalFacade {}
             class Flare extends \Facade\Ignition\Facades\Flare {}
      
 }

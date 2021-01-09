@@ -18,6 +18,8 @@ namespace App\Models{
  * @property string $title
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\ProductItem[] $items
+ * @property-read int|null $items_count
  * @method static \Illuminate\Database\Eloquent\Builder|Product newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Product newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Product query()
@@ -58,6 +60,25 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|ProductItem whereUrl($value)
  */
 	class ProductItem extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\PushNotification
+ *
+ * @property int $id
+ * @property int $product_item_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|PushNotification newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PushNotification newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|PushNotification query()
+ * @method static \Illuminate\Database\Eloquent\Builder|PushNotification whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushNotification whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushNotification whereProductItemId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|PushNotification whereUpdatedAt($value)
+ */
+	class PushNotification extends \Eloquent {}
 }
 
 namespace App\Models{
