@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>RTX Radar</title>
+    <meta name="description" content="Suivre en temps réel les stocks des dernières cartes graphiques (série 30)">
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('/apple-touch-icon.png') }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('/favicon-32x32.png') }}">
@@ -13,6 +14,20 @@
     <link rel="mask-icon" href="{{ asset('/safari-pinned-tab.svg') }}" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#603cba">
     <meta name="theme-color" content="#ffffff">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="RTX Radar">
+    <meta property="og:description" content="Suivre en temps réel les stocks des dernières cartes graphiques (série 30)">
+    <meta property="og:image" content="{{ asset('/card.jpg') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="RTX Radar">
+    <meta property="twitter:description" content="Suivre en temps réel les stocks des dernières cartes graphiques (série 30)">
+    <meta property="twitter:image" content="{{ asset('/card.jpg') }}">
 
     <!-- je chie sur l'optimisation -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
