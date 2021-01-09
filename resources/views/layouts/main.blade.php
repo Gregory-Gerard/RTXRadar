@@ -60,7 +60,7 @@
     </main>
 
     <footer class="container px-4 mx-auto mt-8 text-sm text-gray-600">
-        &copy; {{ date('Y') }} GG
+        &copy; {{ date('Y') }} GG — <a href="https://github.com/Gregory-Gerard/RTXRadar" target="_blank" class="hover:underline">Github</a>
     </footer>
 
     <script>
