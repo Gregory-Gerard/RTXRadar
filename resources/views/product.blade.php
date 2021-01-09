@@ -20,7 +20,6 @@
         }
 
         const parseProductItems = (response) => {
-            console.log(response)
             document.querySelector('main header').innerHTML = `
                 <div class="flex items-center space-x-4"><span class="w-4 h-4 rounded-full ${getPillColor(response.data.items.state)} flex-shrink-0"></span> <span>${getStockText(response.data.items.state)}, ${response.data.items.count} pièces suivies, dernière mise à jour le ${new Date(response.data.items.updated_at).toLocaleString()}</span></div>
             `;
