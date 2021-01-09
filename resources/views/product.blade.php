@@ -2,11 +2,9 @@
 
 @section('content')
     <div class="container px-4 mx-auto">
-        <header>
+        <header class="pb-6 border-b border-gray-800"></header>
 
-        </header>
-
-        <ul class="mt-8 space-y-4"></ul>
+        <ul class="mt-6 space-y-4"></ul>
     </div>
 @endsection
 
