@@ -12,7 +12,7 @@
             fetch('{{ route('api.products.index') }}')
                 .then(response => response.json())
                 .then(response => parseProductList(response))
-                .catch(error => alert("Erreur : " + error));
+                .catch(error => console.error("Erreur : " + error));
         }
 
         const parseProductList = (response) => {

@@ -14,7 +14,7 @@
             fetch('{{ route('api.products.show', $product->id) }}')
                 .then(response => response.json())
                 .then(response => parseProductItems(response))
-                .catch(error => alert("Erreur : " + error));
+                .catch(error => console.error("Erreur : " + error));
         }
 
         const parseProductItems = (response) => {
