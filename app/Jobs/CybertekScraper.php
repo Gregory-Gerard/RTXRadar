@@ -43,9 +43,16 @@ class CybertekScraper implements ShouldQueue
             $crawler = $client->request('GET', $product['url']);
 
             $crawler->filter('#content_product .prod_background')->each(function (/** @var $node Crawler */ $node) use (&$scrapedProductList, $product) {
-                $stock = strtolower($node->filter('.center-dispo > span > span')->text('Non disponible'));
+                // $stock = strtolower($node->filter('.center-dispo > span > span')->text('Non disponible'));
 
-                switch ($stock) {
+                // Si le bouton panier est visible, il est en stock (cybertek à désactivé le bouton panier pour le moment donc s'il revient elles seront commandables)
+                if (stripos($node->filter('.panier')->attr('style'), 'none') === false) {
+                    $state = 'yes';
+                } else {
+                    $state = 'no';
+                }
+
+                /*switch ($node->filter('.panier')->attr('style')) {
                     case 'en stock':
                     case 'dernière pièce':
                     case 'uniquement en magasin':
@@ -58,7 +65,7 @@ class CybertekScraper implements ShouldQueue
                         break;
                     default:
                         $state = 'no';
-                }
+                }*/
 
                 $scrapedProductList[] = [
                     'product_id' => $product['id'],
