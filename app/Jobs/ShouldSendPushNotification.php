@@ -35,7 +35,10 @@ class ShouldSendPushNotification implements ShouldQueue
     public function handle()
     {
         // Récupère les produits en stock et dont la dernière notification date d'il y a plus de 15 minutes
-        $productItemToSend = ProductItem::where('state', 'yes')->whereDoesntHave('pushNotifications', function (Builder $query) {
+        $productItemToSend = ProductItem::where(function (Builder $query) {
+            $query->where('state', 'yes')
+                ->orWhere('state', 'soon');
+        })->whereDoesntHave('pushNotifications', function (Builder $query) {
             $query->where('updated_at', '>', Carbon::now()->subMinutes(15));
         })->get();
 
