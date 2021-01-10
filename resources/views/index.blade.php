@@ -20,8 +20,10 @@
                 <li>
                     <a href="${product.url}" class="flex items-center space-x-4 rounded bg-gray-800 hover:bg-gray-800 bg-opacity-25 transition-colors px-4 py-2 shadow-md">
                         <span class="w-4 h-4 rounded-full ${getPillColor(product.items.state)} flex-shrink-0"></span>
-                        <strong class="text-2xl flex-shrink-0">${product.title}</strong>
-                        <small>${product.items.count} <span class="hidden md:inline">pièces suivies</span> — <span class="hidden md:inline">dernière mise à jour le</span> ${new Date(product.items.updated_at).toLocaleString()}</small>
+                        <div class="flex flex-col">
+                            <strong class="text-2xl flex-shrink-0">${product.title}</strong>
+                            <small>${product.items.count} <span class="hidden md:inline">pièces suivies</span> — <span class="hidden md:inline">dernière mise à jour le</span> ${new Date(product.items.updated_at).toLocaleString()}</small>
+                        </div>
                     </a>
                 </li>
             `).join('');
