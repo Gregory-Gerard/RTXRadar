@@ -38,10 +38,12 @@ class ShouldSendPushNotification implements ShouldQueue
         $productItemToSend = ProductItem::where(function (Builder $query) {
             $query->where('state', 'yes')
                 ->orWhere('state', 'soon');
+        })->whereHas('product', function (Builder $query) {
+            $query->where('push', true);
         })->doesntHave('pushNotifications')->get();
 
         if ($productItemToSend->isNotEmpty()) {
-            $message = "⚠️Produit en stock : ".Str::limit($productItemToSend->pluck('title')->join(', ', ' et '), 20);
+            $message = "⚠️ Produit en stock : ".Str::limit($productItemToSend->pluck('title')->join(', ', ' et '), 20);
 
             \OneSignal::setParam('priority', 10)->sendNotificationToAll($message);
 
