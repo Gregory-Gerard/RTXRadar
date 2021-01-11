@@ -34,13 +34,11 @@ class ShouldSendPushNotification implements ShouldQueue
      */
     public function handle()
     {
-        // Récupère les produits en stock et dont la dernière notification date d'il y a plus de 15 minutes
+        // Récupère les produits en stock et dont aucune notification n'a été envoyée
         $productItemToSend = ProductItem::where(function (Builder $query) {
             $query->where('state', 'yes')
                 ->orWhere('state', 'soon');
-        })->whereDoesntHave('pushNotifications', function (Builder $query) {
-            $query->where('updated_at', '>', Carbon::now()->subMinutes(15));
-        })->get();
+        })->doesntHave('pushNotifications')->get();
 
         if ($productItemToSend->isNotEmpty()) {
             $message = "⚠️Produit en stock : ".Str::limit($productItemToSend->pluck('title')->join(', ', ' et '), 20);
@@ -56,5 +54,10 @@ class ShouldSendPushNotification implements ShouldQueue
                 [ 'product_item_id']
             );
         }
+
+        // Supprime les notifications des produits qui sont repassé hors stock
+        PushNotification::whereHas('productItem', function ($query) {
+            $query->where('state', 'no');
+        })->delete();
     }
 }
