@@ -57,4 +57,15 @@ return [
         ]
     ],
 
+    'rueducommerce' => [
+        'rtx3080' => [
+            'id' => 1,
+            'url' => 'https://www.rueducommerce.fr/listingDyn?boutique_id=18&langue_id=1&categoriesId=15333&caracteristiquesValeursId=552298&from=0'
+        ],
+        'rtx3060ti' => [
+            'id' => 2,
+            'url' => 'https://www.rueducommerce.fr/listingDyn?urlActuelle=3060-ti&boutique_id=18&langue_id=1&recherche=3060-ti&from=0'
+        ]
+    ]
+
 ];
