@@ -16,6 +16,7 @@ namespace App\Models{
  *
  * @property int $id
  * @property string $title
+ * @property int $push
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\ProductItem[] $items
@@ -25,6 +26,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Product query()
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Product wherePush($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Product whereUpdatedAt($value)
  */
@@ -45,6 +47,9 @@ namespace App\Models{
  * @property string $state
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Product $product
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\PushNotification[] $pushNotifications
+ * @property-read int|null $push_notifications_count
  * @method static \Illuminate\Database\Eloquent\Builder|ProductItem newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductItem newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ProductItem query()
@@ -70,6 +75,7 @@ namespace App\Models{
  * @property int $product_item_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\ProductItem $productItem
  * @method static \Illuminate\Database\Eloquent\Builder|PushNotification newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PushNotification newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|PushNotification query()
