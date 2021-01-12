@@ -36,5 +36,6 @@ class Scraper implements ShouldQueue
         SmidistriScraper::dispatch();
         CybertekScraper::dispatch();
         RueducommerceScraper::dispatch();
+        AlternateScraper::dispatch();
     }
 }

@@ -66,6 +66,41 @@ return [
             'id' => 2,
             'url' => 'https://www.rueducommerce.fr/listingDyn?urlActuelle=3060-ti&boutique_id=18&langue_id=1&recherche=3060-ti&from=0'
         ]
-    ]
+    ],
+
+    'alternate' => [
+        'alternatebe' => [
+            'rtx3080' => [
+                'id' => 1,
+                'url' => 'https://fr.alternate.be/html/listings/1599469052569?size=500&sort=PRICE&order=ASC'
+            ],
+            'rtx3060ti' => [
+                'id' => 2,
+                'url' => 'https://fr.alternate.be/html/listings/1606405688744?size=500&sort=PRICE&order=ASC'
+            ],
+        ],
+
+        'alternatede' => [
+            'rtx3080' => [
+                'id' => 1,
+                'url' => 'https://www.alternate.de/html/listings/1599465397714?size=500&sort=PRICE&order=ASC'
+            ],
+            'rtx3060ti' => [
+                'id' => 2,
+                'url' => 'https://www.alternate.de/html/listings/1606466588030?size=500&sort=PRICE&order=ASC'
+            ],
+        ],
+
+        'alternatenl' => [
+            'rtx3080' => [
+                'id' => 1,
+                'url' => 'https://www.alternate.nl/html/listings/1599465397714?size=500&sort=PRICE&order=ASC'
+            ],
+            'rtx3060ti' => [
+                'id' => 2,
+                'url' => 'https://www.alternate.nl/html/listings/1606466588030?size=500&sort=PRICE&order=ASC'
+            ],
+        ]
+    ],
 
 ];
