@@ -5,6 +5,7 @@ namespace App\Jobs;
 use App\Models\ProductItem;
 use App\Models\PushNotification;
 use Carbon\Carbon;
+use DB;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Database\Eloquent\Builder;
@@ -34,12 +35,13 @@ class ShouldSendPushNotification implements ShouldQueue
      */
     public function handle()
     {
-        // Récupère les produits en stock et dont aucune notification n'a été envoyée
+        // Récupère les produits en stock, dont aucune notification n'a été envoyée et qui ne dépasse pas le prix max
         $productItemToSend = ProductItem::where(function (Builder $query) {
             $query->where('state', 'yes')
                 ->orWhere('state', 'soon');
         })->whereHas('product', function (Builder $query) {
-            $query->where('push', true);
+            $query->where('push', true)
+                ->whereColumn('price', '<=', DB::raw('max_price_threshold*100'));
         })->doesntHave('pushNotifications')->get();
 
         if ($productItemToSend->isNotEmpty()) {
