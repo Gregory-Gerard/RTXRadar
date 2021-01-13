@@ -159,4 +159,69 @@ return [
         ]
     ],
 
+    'artencraft' => [
+        'artencraftnl' => [
+            'rtx3080' => [
+                'id' => 1,
+                'url' => 'https://www.artencraft.nl/nl/computer/componenten/videokaarten/?7493=geforce-rtx-3080&filterload=1'
+            ],
+            'rtx3060ti' => [
+                'id' => 2,
+                'url' => 'https://www.artencraft.nl/nl/computer/componenten/videokaarten/?7493=geforce-rtx-3060-ti&filterload=1'
+            ],
+            'rx5700' => [
+                'id' => 3,
+                'url' => 'https://www.artencraft.nl/nl/computer/componenten/videokaarten/?7493=radeon-rx-5700&filterload=1'
+            ],
+            'rx5700xt' => [
+                'id' => 4,
+                'url' => 'https://www.artencraft.nl/nl/computer/componenten/videokaarten/?7493=radeon-rx-5700-xt&filterload=1'
+            ],
+        ],
+        'artencraftbe' => [
+            'rtx3080' => [
+                'id' => 1,
+                'url' => 'https://www.artencraft.be/fr/ordinateurs/composants/cartes-video/?7493=geforce-rtx-3080&filterload=1'
+            ],
+            'rtx3060ti' => [
+                'id' => 2,
+                'url' => 'https://www.artencraft.be/fr/ordinateurs/composants/cartes-video/?7493=geforce-rtx-3060-ti&filterload=1'
+            ],
+            'rx5700' => [
+                'id' => 3,
+                'url' => 'https://www.artencraft.be/fr/ordinateurs/composants/cartes-video/?7493=radeon-rx-5700&filterload=1'
+            ],
+            'rx5700xt' => [
+                'id' => 4,
+                'url' => 'https://www.artencraft.be/fr/ordinateurs/composants/cartes-video/?7493=radeon-rx-5700-xt&filterload=1'
+            ],
+        ],
+    ],
+
+    'caseking' => [
+        'rtx3080' => [
+            'id' => 1,
+            'url' => 'https://www.caseking.de/pc-komponenten/grafikkarten?sPerPage=48&sTemplate=list&ckFilters=13915&ckTab=0&sPage=1&sSort=3'
+        ],
+        'rtx3060ti' => [
+            'id' => 2,
+            'url' => 'https://www.caseking.de/pc-komponenten/grafikkarten?sPerPage=48&sTemplate=list&ckFilters=14202&ckTab=0&sPage=1&sSort=3'
+        ],
+        'rx5700xt' => [
+            'id' => 4,
+            'url' => 'https://www.caseking.de/pc-komponenten/grafikkarten?sPerPage=48&sTemplate=list&ckFilters=11876&ckTab=0&sPage=1&sSort=3'
+        ],
+    ],
+
+    'cloudmarkt' => [
+        'rtx3080' => [
+            'id' => 1,
+            'url' => 'https://www.cloudmarkt.de/search?p=1&q=rtx%203080&o=3&n=50&f=408545'
+        ],
+        'rx5700xt' => [
+            'id' => 4,
+            'url' => 'https://www.cloudmarkt.de/grafikkarten/?p=1&o=3&n=50&f=408545%7C410650%7C408896'
+        ],
+    ],
+
 ];
