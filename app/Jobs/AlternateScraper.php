@@ -47,7 +47,7 @@ class AlternateScraper implements ShouldQueue
                 $crawler->filter('.listingContainer .listRow')->each(function (/** @var $node Crawler */ $node) use (&$scrapedProductList, $website, $product) {
                     parse_str(parse_url($node->filter('.openProductCompare')->link()->getUri(), PHP_URL_QUERY), $qs);
                     $sellerInternalId = $qs['articleId'];
-                    $state = strpos($node->filter('.stockStatus')->attr('class'), 'available_stock') !== false || strpos($node->filter('.stockStatus')->attr('class'), 'ship_only_fast') !== false ? 'yes' : 'no';
+                    $state = $node->filter('.stockStatus')->matches('.available_unsure') !== true && strpos($node->filter('.stockStatus')->attr('class'), 'available') !== false || strpos($node->filter('.stockStatus')->attr('class'), 'ship_only_fast') !== false ? 'yes' : 'no';
 
                     $scrapedProductList[] = [
                         'product_id' => $product['id'],

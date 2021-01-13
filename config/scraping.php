@@ -10,6 +10,14 @@ return [
         'rtx3060ti' => [
             'id' => 2,
             'url' => 'https://www.topachat.com/pages/produits_cat_est_micro_puis_rubrique_est_wgfx_pcie_puis_nblignes_est_200_puis_ordre_est_P_puis_sens_est_ASC_puis_f_est_58-11575.html',
+        ],
+        'rx5700' => [
+            'id' => 3,
+            'url' => 'https://www.topachat.com/pages/produits_cat_est_micro_puis_rubrique_est_wgfx_pcie_puis_nblignes_est_200_puis_ordre_est_P_puis_sens_est_ASC_puis_f_est_58-10586.html',
+        ],
+        'rx5700xt' => [
+            'id' => 4,
+            'url' => 'https://www.topachat.com/pages/produits_cat_est_micro_puis_rubrique_est_wgfx_pcie_puis_nblignes_est_200_puis_ordre_est_P_puis_sens_est_ASC_puis_f_est_58-10587.html',
         ]
     ],
 
@@ -21,6 +29,14 @@ return [
         'rtx3060ti' => [
             'id' => 2,
             'url' => 'https://www.materiel.net/carte-graphique/l426/+fv121-19365/',
+        ],
+        'rx5700' => [
+            'id' => 3,
+            'url' => 'https://www.materiel.net/carte-graphique/l426/+fv121-17714/',
+        ],
+        'rx5700xt' => [
+            'id' => 4,
+            'url' => 'https://www.materiel.net/carte-graphique/l426/+fv121-17715/',
         ]
     ],
 
@@ -32,6 +48,14 @@ return [
         'rtx3060ti' => [
             'id' => 2,
             'url' => 'https://www.ldlc.com/informatique/pieces-informatique/carte-graphique-interne/c4684/+fv121-19365.html',
+        ],
+        'rx5700' => [
+            'id' => 3,
+            'url' => 'https://www.ldlc.com/informatique/pieces-informatique/carte-graphique-interne/c4684/+fv121-17714.html',
+        ],
+        'rx5700xt' => [
+            'id' => 4,
+            'url' => 'https://www.ldlc.com/informatique/pieces-informatique/carte-graphique-interne/c4684/+fv121-17715.html',
         ]
     ],
 
@@ -54,6 +78,10 @@ return [
         'rtx3060ti' => [
             'id' => 2,
             'url' => 'https://www.cybertek.fr/carte-graphique-6.aspx?crits=4229',
+        ],
+        'rx5700xt' => [
+            'id' => 4,
+            'url' => 'https://www.cybertek.fr/carte-graphique-6.aspx?crits=3991',
         ]
     ],
 
@@ -65,6 +93,10 @@ return [
         'rtx3060ti' => [
             'id' => 2,
             'url' => 'https://www.rueducommerce.fr/listingDyn?urlActuelle=3060-ti&boutique_id=18&langue_id=1&recherche=3060-ti&from=0'
+        ],
+        'rx5700xt' => [
+            'id' => 4,
+            'url' => 'https://www.rueducommerce.fr/listingDyn?boutique_id=18&langue_id=1&categoriesId=15333&caracteristiquesValeursId=473151&from=0'
         ]
     ],
 
@@ -78,6 +110,14 @@ return [
                 'id' => 2,
                 'url' => 'https://fr.alternate.be/html/listings/1606405688744?size=500&sort=PRICE&order=ASC'
             ],
+            'rx5700' => [
+                'id' => 3,
+                'url' => 'https://fr.alternate.be/html/listings/1562322675146?size=500&sort=PRICE&order=ASC'
+            ],
+            'rx5700xt' => [
+                'id' => 4,
+                'url' => 'https://fr.alternate.be/html/listings/1562322668528?size=500&sort=PRICE&order=ASC'
+            ],
         ],
 
         'alternatede' => [
@@ -89,6 +129,14 @@ return [
                 'id' => 2,
                 'url' => 'https://www.alternate.de/html/listings/1606466588030?size=500&sort=PRICE&order=ASC'
             ],
+            'rx5700' => [
+                'id' => 3,
+                'url' => 'https://www.alternate.de/html/listings/1561620484893?size=500&sort=PRICE&order=ASC'
+            ],
+            'rx5700xt' => [
+                'id' => 4,
+                'url' => 'https://www.alternate.de/html/listings/1561620588772?size=500&sort=PRICE&order=ASC'
+            ],
         ],
 
         'alternatenl' => [
@@ -99,6 +147,14 @@ return [
             'rtx3060ti' => [
                 'id' => 2,
                 'url' => 'https://www.alternate.nl/html/listings/1606466588030?size=500&sort=PRICE&order=ASC'
+            ],
+            'rx5700' => [
+                'id' => 3,
+                'url' => 'https://www.alternate.nl/html/listings/1561620484893?size=500&sort=PRICE&order=ASC'
+            ],
+            'rx5700xt' => [
+                'id' => 4,
+                'url' => 'https://www.alternate.nl/html/listings/1561620588772?size=500&sort=PRICE&order=ASC'
             ],
         ]
     ],
