@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Jobs\DeleteOldProductItems;
 use App\Jobs\Scraper;
 use App\Jobs\ShouldSendPushNotification;
 use Illuminate\Console\Scheduling\Schedule;
@@ -28,6 +29,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->job(new Scraper)->everyMinute()->withoutOverlapping(5)->after(function (){
             ShouldSendPushNotification::dispatch();
+            DeleteOldProductItems::dispatch();
         });
     }
 
