@@ -46,7 +46,7 @@ class CybertekScraper implements ShouldQueue
                 // $stock = strtolower($node->filter('.center-dispo > span > span')->text('Non disponible'));
 
                 // Si le bouton panier est visible, il est en stock (cybertek à désactivé le bouton panier pour le moment donc s'il revient elles seront commandables)
-                if (stripos($node->filter('.panier')->attr('style'), 'none') === false) {
+                if (stripos($node->filter('.panier')->attr('style'), 'none') === false && $node->filter('.panier a')->attr('class') !== 'disable') {
                     $state = 'yes';
                 } else {
                     $state = 'no';
