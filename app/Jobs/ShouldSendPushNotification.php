@@ -45,7 +45,7 @@ class ShouldSendPushNotification implements ShouldQueue
         })->doesntHave('pushNotifications')->get();
 
         if ($productItemToSend->isNotEmpty()) {
-            $message = "⚠️ Produit en stock : ".Str::limit($productItemToSend->pluck('title')->join(', ', ' et '), 20);
+            $message = "⚠️ Produit en stock : {$productItemToSend->pluck('title')->join(', ', ' et ')}";
 
             \OneSignal::setParam('priority', 10)->sendNotificationToAll($message);
 
