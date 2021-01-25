@@ -39,6 +39,6 @@ class Scraper implements ShouldQueue
         AlternateScraper::dispatch();
         ArtencraftScraper::dispatch();
         CasekingScraper::dispatch();
-        CloudmarktScraper::dispatch();
+        // CloudmarktScraper::dispatch();
     }
 }
