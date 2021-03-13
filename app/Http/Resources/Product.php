@@ -24,6 +24,7 @@ class Product extends JsonResource
             'items' => [
                 'data' => ProductItem::collection($this->whenLoaded('items')),
                 'count' => $this->items()->count(),
+                'avg_price' => $this->items()->avg('price'),
                 'state' => array_intersect(['yes'], $this->items->pluck('state')->toArray()) ? 'yes' : (array_intersect(['soon'], $this->items->pluck('state')->toArray()) ? 'soon' : 'no'),
                 'updated_at' => $this->items()->reorder()->orderByDesc('updated_at')->first()->updated_at,
             ],

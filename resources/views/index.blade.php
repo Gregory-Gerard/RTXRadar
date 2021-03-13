@@ -22,7 +22,12 @@
                         <span class="w-4 h-4 rounded-full ${getPillColor(product.items.state)} flex-shrink-0"></span>
                         <div class="flex flex-col">
                             <strong class="text-2xl flex-shrink-0">${product.title}</strong>
-                            <small>${product.items.count} <span class="hidden md:inline">pièces suivies</span> — <span class="hidden md:inline">dernière mise à jour le</span> ${new Date(product.items.updated_at).toLocaleString()}</small>
+                            <small>
+                                ~${(product.items.avg_price/100).toFixed(2)}&nbsp;€
+                                —
+                                ${product.items.count} <span class="hidden md:inline">pièces suivies</span>
+                                —
+                                <span class="hidden md:inline">dernière mise à jour le</span> ${new Date(product.items.updated_at).toLocaleString()}</small>
                         </div>
                     </a>
                 </li>
