@@ -30,15 +30,20 @@ class Scraper implements ShouldQueue
      */
     public function handle()
     {
-        TopachatScraper::dispatch();
-        MaterielnetScraper::dispatch();
-        LdlcScraper::dispatch();
-        SmidistriScraper::dispatch();
-        CybertekScraper::dispatch();
-        RueducommerceScraper::dispatch();
-        AlternateScraper::dispatch();
-        // ArtencraftScraper::dispatch();
-        CasekingScraper::dispatch();
-        // CloudmarktScraper::dispatch();
+        try {
+            TopachatScraper::dispatch();
+            MaterielnetScraper::dispatch();
+            LdlcScraper::dispatch();
+            SmidistriScraper::dispatch();
+            CybertekScraper::dispatch();
+            RueducommerceScraper::dispatch();
+            AlternateScraper::dispatch();
+            // ArtencraftScraper::dispatch();
+            CasekingScraper::dispatch();
+            // CloudmarktScraper::dispatch();
+        } catch (\Exception $e) {
+            \OneSignal::setParam('priority', 10)->sendNotificationToSegment("💥 Erreur lors du scraping ! {$e->getMessage()}", "Admin");
+            \Log::error($e);
+        }
     }
 }
