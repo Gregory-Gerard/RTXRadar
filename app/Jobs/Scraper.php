@@ -32,12 +32,12 @@ class Scraper implements ShouldQueue
     {
         try {
             TopachatScraper::dispatch();
-            MaterielnetScraper::dispatch();
+            // MaterielnetScraper::dispatch();
             LdlcScraper::dispatch();
             SmidistriScraper::dispatch();
             CybertekScraper::dispatch();
             RueducommerceScraper::dispatch();
-            AlternateScraper::dispatch();
+            // AlternateScraper::dispatch();
             // ArtencraftScraper::dispatch();
             CasekingScraper::dispatch();
             // CloudmarktScraper::dispatch();
